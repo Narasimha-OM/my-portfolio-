@@ -202,6 +202,83 @@ section h2:hover::after { width: 100%; }
 .contact-text { font-size: 1.1rem; line-height: 1.8; }
 .contact-text a { color: #64ffda; text-decoration: none; }
 
+/* CONTACT SECTION FULL HEIGHT */
+#contact {
+  min-height: 100vh; /* Fill viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: rgba(10,25,47,0.95);
+  text-align: center;
+}
+
+/* Contact Logo Animation & Glow */
+.contact-logo-box {
+  margin-bottom: 25px;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.contact-logo {
+  height: 300px; /* bigger and more visible */
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px #64ffda);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Hover effect for logo */
+.contact-logo:hover {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 25px #64ffda) brightness(1.2);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulsing glow animation */
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 15px #64ffda); }
+  50% { filter: drop-shadow(0 0 30px #64ffda); }
+}
+
+
+
+/* Contact Logo Animation & Glow */
+.contact-logo-box {
+  text-align: center;
+  margin-bottom: 25px;
+  height: fit-content;
+  width: 200px;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.contact-logo {
+  height: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px #64ffda);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover effect */
+.contact-logo:hover {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 18px #64ffda) brightness(1.2);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
 /* Footer */
 footer { text-align: center; padding: 20px; background: rgba(10,25,47,0.85); color: #64ffda; }
 </style>
@@ -357,8 +434,19 @@ footer { text-align: center; padding: 20px; background: rgba(10,25,47,0.85); col
 </section>
 
 <!-- CONTACT -->
+<!-- CONTACT -->
+<!-- CONTACT -->
 <section id="contact">
   <h2>Let's Connect</h2>
+
+  <div class="contact-logo-box">
+    <img 
+      src="https://raw.githubusercontent.com/Narasimha-OM/my-portfolio/main/assets/contactme.png" 
+      alt="Contact Me" 
+      class="contact-logo"
+    >
+  </div>
+
   <p class="contact-text">
     Let's Work Together! Feel free to drop a message, let's collaborate and create something amazing together!<br><br>
     Email: <a href="mailto:reddyn095n8@gmail.com">reddyn095n8@gmail.com</a><br>
@@ -366,6 +454,9 @@ footer { text-align: center; padding: 20px; background: rgba(10,25,47,0.85); col
     Location: Bangalore, Karnataka, India
   </p>
 </section>
+
+
+
 
 <!-- Footer -->
 <footer>
@@ -386,4 +477,3 @@ function openTab(tabId) {
 
 </body>
 </html>
-
